@@ -17,7 +17,7 @@ A simple shop API built with Django REST Framework and JWT authentication. It in
 ## Project Structure
 
 ```text
-drf_shop_api/
+shop_api/
 |-- config/
 |-- users/
 |-- products/
@@ -32,7 +32,7 @@ drf_shop_api/
 
 ```bash
 git clone <your-repo-url>
-cd drf_shop_api
+cd shop_api
 ```
 
 2. Create and activate a virtual environment:
