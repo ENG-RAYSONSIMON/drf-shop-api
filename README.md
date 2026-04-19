@@ -48,13 +48,15 @@ venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 ```
 
-4. Optional environment variables:
+4. Create a local `.env` file:
 
 ```powershell
 Copy-Item .env.example .env
 ```
 
-This project reads these environment variables if you set them in your shell:
+The app now auto-loads `.env` from the project root, so you can keep local settings there instead of setting them manually in your shell.
+
+Example `.env` values:
 
 - `DJANGO_SECRET_KEY`
 - `DJANGO_DEBUG`
@@ -227,3 +229,4 @@ The test suite covers:
 
 ## Notes
 - For production, set `DJANGO_SECRET_KEY`, `DJANGO_DEBUG=False`, and a real `DJANGO_ALLOWED_HOSTS` value.
+- If `.env` does not exist, Django falls back to safe local defaults in `config/settings.py`.
